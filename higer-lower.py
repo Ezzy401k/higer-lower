@@ -37,6 +37,7 @@ while new_game:
     
     # loops through asking the questions.
     while loop:
+        # call the fetch_data function and assign the return value to the items.
         item1 = fetch_data()
         item2 = fetch_data()
         handler = True
