@@ -69,6 +69,7 @@ while new_game:
 
     again = input("Do you want to play again,\ninput 'yes' or 'no': ")
 
+    # reset the game and lounch again.
     if again == 'yes':
         os.system('cls')
     else:
