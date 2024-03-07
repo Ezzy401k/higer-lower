@@ -64,6 +64,7 @@ while new_game:
                     print(art.logo)
                     print(f"Sorry, that's wrong. Final score: {score}")
             else:
+                # if incorrect input has been received show this and loop.
                 print("Please Enter 'A' or 'B'.")
 
     again = input("Do you want to play again,\ninput 'yes' or 'no': ")
