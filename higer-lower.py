@@ -52,6 +52,7 @@ while new_game:
 
             # game logic.
             if users_input == 'A' or users_input == 'B':
+                # compares user input with the return value.
                 if users_input == compare(item1, item2):
                     score += 1
                     handler = False
