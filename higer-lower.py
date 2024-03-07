@@ -1,8 +1,10 @@
 import random
 import game_data
-data = game_data.data
+import art
 import os
 
+
+data = game_data.data
 def fetch_data():
     item = {}
     item = data[random.randint(0,len(data)-1)]
@@ -22,15 +24,18 @@ new_game =True
 while new_game:
     score = 0
     loop = True
+    print(art.logo)
     while loop:
 
         item1 = fetch_data()
         item2 = fetch_data()
 
         handler = True
+        
         while handler:
-
+            
             print(f"Compare A: {item1['name']}, {item1['description']}, from {item1["country"]}.")
+            print(art.vs)
             print(f"Against B: {item2['name']}, {item2['description']}, from {item2["country"]}.")
             users_input = input("Who has more followers? Type 'A' or 'B': ").upper()
             os.system("cls")
@@ -39,10 +44,12 @@ while new_game:
                 if users_input == compare(item1, item2):
                     score += 1
                     handler = False
+                    print(art.logo)
                     print(f"Your rigth! Current score: {score}")
                 else:
                     loop = False
                     handler = False
+                    print(art.logo)
                     print(f"Sorry, that's wrong. Final score: {score}")
             else:
                 print("Please Enter 'A' or 'B'.")
