@@ -40,6 +40,7 @@ while new_game:
 
     # loops through asking the questions.
     while loop:
+        # call the fetch_data function and assign the return value to the items.
         item1 = fetch_data()
         item2 = fetch_data()
         handler = True
@@ -54,6 +55,7 @@ while new_game:
 
             # game logic.
             if users_input == 'A' or users_input == 'B':
+                # compares user input with the return value.
                 if users_input == compare(item1, item2):
                     score += 1
                     handler = False
@@ -65,10 +67,12 @@ while new_game:
                     print(art.logo)
                     print(f"Sorry, that's wrong. Final score: {score}")
             else:
+                # if incorrect input has been received show this and loop.
                 print("Please Enter 'A' or 'B'.")
 
     again = input("Do you want to play again,\ninput 'yes' or 'no': ")
 
+    # reset the game and lounch again.
     if again == 'yes':
         os.system('cls')
     else:
