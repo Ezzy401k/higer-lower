@@ -5,9 +5,11 @@ import os
 
 data = game_data.data
 
+
 def fetch_data():
     """Fetches a random item from the data."""
-    return data[random.randint(0, len(data)-1)]
+    return data[random.randint(0, len(data) - 1)]
+
 
 def compare(item1, item2):
     """
@@ -20,12 +22,13 @@ def compare(item1, item2):
     Returns:
         str: 'A' if item1 has more followers, 'B' otherwise.
     """
-    num1 = item1['follower_count'] 
+    num1 = item1['follower_count']
     num2 = item2['follower_count']
     if num1 > num2:
         return 'A'
     else:
         return 'B'
+
 
 new_game = True
 
@@ -34,7 +37,7 @@ while new_game:
     score = 0
     loop = True
     print(art.logo)
-    
+
     # loops through asking the questions.
     while loop:
         item1 = fetch_data()
